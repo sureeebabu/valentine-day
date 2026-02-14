@@ -48,6 +48,24 @@ function initMusicControl() {
 
     let isPlaying = false;
 
+    // Try to autoplay music when page loads
+    setTimeout(() => {
+        bgMusic.play()
+            .then(() => {
+                // Autoplay successful
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+                isPlaying = true;
+            })
+            .catch(error => {
+                // Autoplay blocked by browser - user needs to click
+                console.log('Autoplay blocked. User interaction required.');
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+                isPlaying = false;
+            });
+    }, 500); // Small delay to ensure page is loaded
+
     musicControl.addEventListener('click', () => {
         if (isPlaying) {
             // Pause music
@@ -59,8 +77,6 @@ function initMusicControl() {
             // Play music
             bgMusic.play().catch(error => {
                 console.log('Audio playback failed:', error);
-                // Handle autoplay restrictions
-                alert('Please click the music button to enable background music');
             });
             playIcon.classList.add('hidden');
             pauseIcon.classList.remove('hidden');
@@ -203,6 +219,21 @@ function initProposalButtons() {
             responseTitle.textContent = "I knew you'd say yes eventually! 💖";
         } else {
             responseTitle.textContent = "You've made me the happiest person alive! 💖";
+        }
+
+        // Play the background music if not already playing
+        const bgMusic = document.getElementById('bgMusic');
+        const playIcon = document.querySelector('.play-icon');
+        const pauseIcon = document.querySelector('.pause-icon');
+
+        if (bgMusic.paused) {
+            bgMusic.play().then(() => {
+                // Update music control button to show pause icon
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            }).catch(error => {
+                console.log('Music playback failed:', error);
+            });
         }
 
         // Create celebration hearts
