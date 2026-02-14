@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special Valentine's Day message for my beloved">
+    <title>Happy Valentine's Day, My Love ❤️</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating Hearts Background Animation -->
+    <div class="hearts-background" id="heartsContainer"></div>
+
+    <!-- Music Control Button -->
+    <button class="music-control" id="musicControl" aria-label="Play background music">
+        <svg class="music-icon play-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+        </svg>
+        <svg class="music-icon pause-icon hidden" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+        </svg>
+    </button>
+
+    <!-- Audio Element (Background Music) -->
+    <audio id="bgMusic" loop>
+        <!-- You can add your romantic music file here -->
+        <!-- <source src="romantic-music.mp3" type="audio/mpeg"> -->
+    </audio>
+
+    <!-- Section 1: Landing/Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <div class="heart-icon-large">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+            </div>
+            <h1 class="hero-title">Happy Valentine's Day</h1>
+            <p class="hero-subtitle">To the Love of My Life</p>
+            <p class="hero-message">
+                Every moment with you feels like a beautiful dream.
+                You are my sunshine, my happiness, and my forever.
+                Today and always, I celebrate the incredible person you are
+                and the beautiful love we share.
+            </p>
+            <a href="#reasons" class="cta-button">
+                Discover Why I Love You
+                <span class="arrow">↓</span>
+            </a>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="decorative-hearts">
+            <div class="deco-heart deco-heart-1"></div>
+            <div class="deco-heart deco-heart-2"></div>
+            <div class="deco-heart deco-heart-3"></div>
+        </div>
+    </section>
+
+    <!-- Section 2: Why I Love You -->
+    <section class="reasons-section" id="reasons">
+        <div class="container">
+            <h2 class="section-title">Why I Love You</h2>
+            <p class="section-subtitle">There are countless reasons, but here are just a few...</p>
+
+            <div class="reasons-grid">
+                <!-- Reason 1 -->
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <h3>Your Beautiful Smile</h3>
+                    <p>Your smile lights up my darkest days and fills my heart with pure joy. It's the most beautiful
+                        thing I've ever seen.</p>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <h3>Your Kind Heart</h3>
+                    <p>The way you care for others and show compassion makes me fall in love with you more every single
+                        day.</p>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <h3>Your Laughter</h3>
+                    <p>Your laugh is my favorite sound in the world. It's contagious, genuine, and absolutely adorable.
+                    </p>
+                </div>
+
+                <!-- Reason 4 -->
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <h3>The Way You Understand Me</h3>
+                    <p>You know me better than anyone else. You understand my silence, my dreams, and everything in
+                        between.</p>
+                </div>
+
+                <!-- Reason 5 -->
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <h3>Your Strength</h3>
+                    <p>You inspire me with your courage and determination. You face challenges with grace and never give
+                        up.</p>
+                </div>
+
+                <!-- Reason 6 -->
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <h3>Every Little Thing</h3>
+                    <p>From the way you talk to the way you dream, everything about you is perfect. You are my
+                        everything.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Photo Gallery -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Beautiful Moments</h2>
+            <p class="section-subtitle">Every picture tells our love story</p>
+
+            <div class="gallery-grid">
+                <!-- Photo 1 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="Images/1.jpeg" alt="Our beautiful moment together" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-caption">Forever in my heart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="Images/2.jpg" alt="Our beautiful moment together" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-caption">You and me</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="Images/3.png" alt="Our beautiful moment together" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-caption">Perfect moments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="Images/4.png" alt="Our beautiful moment together" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-caption">Love of my life</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="Images/5.jpeg" alt="Our beautiful moment together" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-caption">Always together</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="Images/6.jpg" alt="Our beautiful moment together" loading="lazy">
+                        <div class="gallery-overlay">
+                            <p class="gallery-caption">My happiness</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Valentine Proposal/Message -->
+    <section class="proposal-section" id="proposal">
+        <div class="proposal-content">
+            <div class="proposal-heart">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+            </div>
+            <h2 class="proposal-title">Will You Be My Valentine?</h2>
+            <p class="proposal-message">
+                My dearest love,<br><br>
+
+                On this special day, I want you to know that you mean the world to me.
+                You've brought so much love, joy, and meaning into my life.
+                Every day with you is a gift I cherish deeply.<br><br>
+
+                I promise to love you unconditionally, to support your dreams,
+                to make you smile when you're sad, and to be by your side through
+                every adventure life brings us.<br><br>
+
+                You are my best friend, my soulmate, and my forever love.
+                I can't imagine my life without you in it.<br><br>
+
+                <strong>Will you be my Valentine, today and always?</strong>
+            </p>
+
+            <div class="proposal-buttons">
+                <button class="proposal-btn yes-btn" id="yesBtn">
+                    Yes! ❤️
+                </button>
+                <button class="proposal-btn no-btn" id="noBtn">
+                    Of course! 💕
+                </button>
+            </div>
+
+            <!-- Hidden response message -->
+            <div class="response-message hidden" id="responseMessage">
+                <h3>You've made me the happiest person alive! 💖</h3>
+                <p>I love you more than words can express. Happy Valentine's Day, my forever Valentine! 🌹</p>
+            </div>
+        </div>
+
+        <!-- Decorative floating hearts -->
+        <div class="proposal-decorative-hearts">
+            <div class="prop-heart prop-heart-1"></div>
+            <div class="prop-heart prop-heart-2"></div>
+            <div class="prop-heart prop-heart-3"></div>
+            <div class="prop-heart prop-heart-4"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with ❤️ for the most amazing person in the world</p>
+        <p class="footer-signature">Forever yours, Suresh Kumar</p>
+        <p class="footer-date">Valentine's Day 2026</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
