@@ -134,20 +134,76 @@ function initScrollAnimations() {
 
 /**
  * Handles the Valentine proposal button clicks
+ * "Yes" button shows success message
+ * "No" button playfully runs away!
  */
 function initProposalButtons() {
     const yesBtn = document.getElementById('yesBtn');
     const noBtn = document.getElementById('noBtn');
     const responseMessage = document.getElementById('responseMessage');
     const proposalButtons = document.querySelector('.proposal-buttons');
+    const buttonsContainer = document.getElementById('buttonsContainer');
 
-    // Function to show response
-    function showResponse() {
+    let noBtnMoveCount = 0; // Track how many times the No button has moved
+
+    /**
+     * Moves the "No" button to a random position
+     * Keeps it within the visible container bounds
+     */
+    function moveNoButton() {
+        const container = buttonsContainer.getBoundingClientRect();
+        const button = noBtn.getBoundingClientRect();
+
+        // Make button absolutely positioned on first move
+        if (noBtnMoveCount === 0) {
+            noBtn.style.position = 'absolute';
+        }
+
+        // Calculate maximum movement range (stay within container)
+        const maxX = container.width - button.width - 40; // 40px padding
+        const maxY = container.height - button.height - 40;
+
+        // Generate random position
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+
+        // Apply the new position
+        noBtn.style.left = randomX + 'px';
+        noBtn.style.top = randomY + 'px';
+        noBtn.style.transform = 'none'; // Remove any transform
+
+        // Increment move counter
+        noBtnMoveCount++;
+
+        // After 3 attempts, make the button text more pleading
+        if (noBtnMoveCount === 3) {
+            noBtn.textContent = 'Please? 🥺';
+        } else if (noBtnMoveCount === 5) {
+            noBtn.textContent = 'Come on... 😢';
+        } else if (noBtnMoveCount === 7) {
+            noBtn.textContent = 'Fine, Yes! 💕';
+            // After many attempts, clicking No also says Yes!
+            noBtn.onclick = showYesResponse;
+        }
+    }
+
+    /**
+     * Shows the success response when "Yes" is clicked
+     */
+    function showYesResponse() {
         // Hide buttons
         proposalButtons.style.display = 'none';
 
         // Show response message
         responseMessage.classList.remove('hidden');
+
+        // Update message based on which button was clicked
+        const responseTitle = responseMessage.querySelector('h3');
+        if (noBtnMoveCount >= 7) {
+            responseTitle.textContent = "I knew you'd say yes eventually! 💖";
+        } else {
+            responseTitle.textContent = "You've made me the happiest person alive! 💖";
+        }
 
         // Create celebration hearts
         createCelebrationHearts();
@@ -156,9 +212,23 @@ function initProposalButtons() {
         celebrateResponse();
     }
 
-    // Both buttons lead to the same happy response
-    yesBtn.addEventListener('click', showResponse);
-    noBtn.addEventListener('click', showResponse);
+    // "Yes" button - show success message
+    yesBtn.addEventListener('click', showYesResponse);
+
+    // "No" button - run away on hover (desktop)
+    noBtn.addEventListener('mouseenter', moveNoButton);
+
+    // "No" button - run away on touch start (mobile)
+    noBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // Prevent default touch behavior
+        moveNoButton();
+    });
+
+    // "No" button - also move on click attempt (extra playful)
+    noBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        moveNoButton();
+    });
 }
 
 /**

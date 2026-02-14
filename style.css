@@ -623,11 +623,15 @@ body {
 }
 
 .proposal-buttons {
+    position: relative;
+    min-height: 150px;
     display: flex;
     gap: var(--spacing-md);
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin-top: var(--spacing-md);
+    padding: var(--spacing-lg);
 }
 
 .proposal-btn {
@@ -637,14 +641,17 @@ body {
     border: none;
     border-radius: var(--radius-lg);
     cursor: pointer;
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     font-family: var(--font-body);
+    white-space: nowrap;
 }
 
 .yes-btn {
     background: var(--gradient-primary);
     color: var(--color-white);
     box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 10;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .yes-btn:hover {
@@ -656,11 +663,9 @@ body {
     background: var(--color-secondary);
     color: var(--color-primary-dark);
     box-shadow: var(--shadow-md);
-}
-
-.no-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 5;
 }
 
 .proposal-btn:active {
